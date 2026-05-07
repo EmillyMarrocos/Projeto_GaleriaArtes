@@ -117,7 +117,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
 
-
  <td align="center">
       <a href="https://github.com/StephanieCaroll" title="Stephanie Caroline">
         <img src="https://github.com/StephanieCaroll.png" width="100px;" alt="Foto da Stephanie"/><br>
@@ -129,10 +128,10 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 </table>
 
 
-## 📫 Contribuindo para 4Movie
+## 📫 Contribuindo para Fibonacci
 
 
-Para contribuir com **4Movie**, siga estas etapas:
+Para contribuir com **Fibonacci**, siga estas etapas:
 
 1. Bifurque este repositório.
 2. Crie um branch:  
