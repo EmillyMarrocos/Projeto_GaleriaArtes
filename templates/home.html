@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container hero-section">
+    <div class="row align-items-center">
+        <div class="col-12 col-md-5 text-center text-md-left mb-4 mb-md-0">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Fragonard%2C_The_Reader.jpg/960px-Fragonard%2C_The_Reader.jpg" class="hero-img shadow-sm">
+        </div>
+        <div class="col-12 col-md-7 pl-md-5">
+            <h1 class="hero-title">Arte local,<br class="d-none d-md-block">alma única</h1>
+            <p class="hero-text">
+                Descubra obras originais de artistas da sua região. Cada peça carrega uma história, um olhar e a paixão de quem cria com o coração.
+            </p>
+            <div class="button-group">
+                <button class="btn btn-outline-custom">Explorar Galeria →</button>
+                <button class="btn btn-outline-custom">Sou Artista</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-end mb-4">
+        <div class="mb-2 mb-sm-0">
+            <small class="text-muted text-uppercase" style="letter-spacing: 2px;">Coleção</small>
+            <h2 class="font-weight-bold">Obras Recentes</h2>
+        </div>
+        <a href="#" class="text-dark small font-weight-bold">VER TODAS →</a>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+            <div class="card-obra">
+                <span class="badge-categoria">PINTURA</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Jean-Antoine_Watteau_La_Surprise%2C_oil_on_panel.jpg" class="obra-img">
+                <div class="pt-3">
+                    <h6 class="mb-0 font-weight-bold">A SURPRESA</h6>
+                    <small class="text-muted">Jean-Antoine Watteau</small>
+                    <p class="font-weight-bold mt-1">R$ 2.800</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+            <div class="card-obra">
+                <span class="badge-categoria">CERÂMICA</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Fragonard%2C_The_Swing.jpg/960px-Fragonard%2C_The_Swing.jpg" class="obra-img">
+                <div class="pt-3">
+                    <h6 class="mb-0 font-weight-bold">O BALANÇO</h6>
+                    <small class="text-muted">Jean-Honoré Fragonard</small>
+                    <p class="font-weight-bold mt-1">R$ 1.500</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+            <div class="card-obra">
+                <span class="badge-categoria">DESENHO</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Madame_de_Pompadour.jpg/500px-Madame_de_Pompadour.jpg" class="obra-img">
+                <div class="pt-3">
+                    <h6 class="mb-0 font-weight-bold">MARQUESA DE POMPADOUR</h6>
+                    <small class="text-muted">François Boucher</small>
+                    <p class="font-weight-bold mt-1">R$ 2.800</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+            <div class="card-obra">
+                <span class="badge-categoria">FOTOGRAFIA</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Thomas_Gainsborough_%281727-1788%29_-_Mrs_Mary_Robinson_%28Perdita%29_-_P42_-_The_Wallace_Collection.jpg" class="obra-img">
+                <div class="pt-3">
+                    <h6 class="mb-0 font-weight-bold">MRS. MARY ROBINSON</h6>
+                    <small class="text-muted">Thomas Gainsborough</small>
+                    <p class="font-weight-bold mt-1">R$ 2.800</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

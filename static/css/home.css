@@ -1,0 +1,335 @@
+:root {
+    --texto-escuro: #2c2c2c;
+    --btn-borda: #d4c5b5;
+    --hover-color: #5D4037;
+    --cinza-claro: #f8f9fa;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 60px 0;
+}
+
+.hero-img {
+    border-radius: 40px;
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+    height: auto;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: var(--texto-escuro);
+    margin-bottom: 1rem;
+}
+
+.hero-text {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #666;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+/* Grupo de botões*/
+.button-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn-outline-custom {
+    border: 1px solid var(--btn-borda);
+    background: white;
+    color: var(--texto-escuro);
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 10px 24px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    display: inline-block;
+    width: auto;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--hover-color);
+    color: white;
+    border-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+.btn-outline-custom:active {
+    transform: translateY(0);
+}
+
+/* Cards */
+.card-obra {
+    border: none;
+    background: transparent;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card-obra:hover {
+    transform: translateY(-5px);
+}
+
+.obra-img {
+    border-radius: 12px;
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.badge-categoria {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 5px 12px;
+    font-size: 0.65rem;
+    font-weight: bold;
+    border-radius: 20px;
+    z-index: 1;
+    backdrop-filter: blur(4px);
+    letter-spacing: 0.5px;
+}
+
+/* --- RESPONSIVIDADE --- */
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 30px 0;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .hero-text {
+        font-size: 0.7rem;
+        text-align: center;
+        margin: 15px 0;
+        padding: 0 10px;
+    }
+    
+    .hero-img {
+        max-width: 250px;
+        margin: 0 auto 20px;
+        border-radius: 30px;
+    }
+
+    .button-group {
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .btn-outline-custom {
+        padding: 8px 18px;
+        font-size: 0.65rem;
+        white-space: nowrap;
+    }
+    
+    .obra-img {
+        height: 220px;
+    }
+    
+    .badge-categoria {
+        font-size: 0.55rem;
+        padding: 3px 10px;
+        top: 12px;
+        left: 12px;
+    }
+    
+    .card-obra h6 {
+        font-size: 0.85rem;
+    }
+    
+    .card-obra small {
+        font-size: 0.7rem;
+    }
+    
+    .card-obra p {
+        font-size: 0.9rem;
+        margin-top: 5px;
+    }
+    
+    .container.mb-5 .d-flex {
+        padding: 0 5px;
+    }
+    
+    .container.mb-5 h2 {
+        font-size: 1.5rem;
+    }
+    
+    .container.mb-5 small {
+        font-size: 0.65rem;
+    }
+}
+
+
+/* TABLETS (entre 577px e 768px) */
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-text {
+        font-size: 0.75rem;
+    }
+    
+    .button-group {
+        gap: 10px;
+    }
+    
+    .btn-outline-custom {
+        padding: 9px 20px;
+        font-size: 0.68rem;
+    }
+    
+    .obra-img {
+        height: 240px;
+    }
+    
+    .hero-img {
+        max-width: 320px;
+    }
+}
+
+/* TABLETS Grandes (769px até 1023px) */
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .btn-outline-custom {
+        padding: 10px 24px;
+    }
+    
+    .obra-img {
+        height: 280px;
+    }
+}
+
+/* DESKTOP (1024px até 1399px) */
+
+@media (min-width: 1024px) {
+    .hero-section {
+        padding: 80px 0;
+    }
+    
+    .hero-title {
+        font-size: 3.2rem;
+    }
+    
+    .hero-text {
+        font-size: 0.85rem;
+    }
+    
+    .obra-img {
+        height: 320px;
+    }
+    
+    .btn-outline-custom {
+        padding: 10px 28px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Telas muito grande (1400px+) */
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .hero-text {
+        font-size: 1rem;
+    }
+    
+    .obra-img {
+        height: 380px;
+    }
+    
+    .btn-outline-custom {
+        padding: 12px 32px;
+        font-size: 0.8rem;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        padding: 20px 0;
+    }
+    
+    .hero-img {
+        max-width: 180px;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .obra-img {
+        height: 180px;
+    }
+    
+    .button-group {
+        gap: 8px;
+    }
+    
+    .btn-outline-custom {
+        padding: 6px 14px;
+        font-size: 0.6rem;
+    }
+}
+
+/* Hover em dispositivos com mouse */
+@media (hover: hover) {
+    .card-obra:hover {
+        transform: translateY(-5px);
+    }
+    
+    .btn-outline-custom:hover {
+        transform: translateY(-2px);
+    }
+}
+
+/* Toque em dispositivos mobile */
+@media (hover: none) {
+    .btn-outline-custom:active {
+        background-color: var(--hover-color);
+        color: white;
+        transform: scale(0.98);
+    }
+    
+    .card-obra:active {
+        transform: scale(0.99);
+    }
+}
+
+/* Animações */
+.btn-outline-custom, 
+.card-obra, 
+.obra-img {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

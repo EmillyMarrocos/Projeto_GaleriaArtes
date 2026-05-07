@@ -1,0 +1,13 @@
+:root {
+    --bg-creme: #FDF9F3;
+    --marrom-footer: #5D4037;
+    --texto-escuro: #333333;
+    --btn-borda: #E0E0E0;
+}
+
+body {
+    background-color: var(--bg-creme);
+    font-family: 'Poppins', sans-serif;
+    color: var(--texto-escuro);
+    margin: 0;
+}

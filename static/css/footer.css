@@ -1,0 +1,448 @@
+.artist-invite {
+    background: linear-gradient(135deg, #4a3729 0%, #3a2a1f 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    margin-top: 40px;
+}
+
+.artist-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.artist-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.artist-description {
+    font-size: 0.95rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto 25px;
+    line-height: 1.5;
+    color: white;
+    padding: 0 15px;
+}
+
+.btn-artist-cta {
+    background: white;
+    color: #4a3729;
+    border: none;
+    padding: 12px 28px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-artist-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    gap: 14px;
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+    width: 18px;
+    height: 18px;
+}
+
+.btn-artist-cta:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+/*Principal*/
+.main-footer {
+    background: #2c1e12;
+    color: #D7CCC8;
+    padding-top: 50px;
+}
+
+.footer-brand {
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.footer-description {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    color: #D7CCC8;
+}
+
+/* Links */
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    color: #D7CCC8;
+    text-decoration: none;
+}
+
+.social-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.social-icon:hover {
+    background: #d4b896;
+    color: #1a1208;
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+/* Footer Sections */
+.footer-section {
+    margin-bottom: 25px;
+}
+
+.footer-title {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+.footer-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background: #d4b896;
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-list li {
+    margin-bottom: 8px;
+}
+
+.footer-links-list a {
+    color: #D7CCC8;
+    text-decoration: none;
+    font-size: 0.78rem;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+    display: inline-block;
+}
+
+.footer-links-list a:hover {
+    color: #d4b896;
+    opacity: 1;
+    transform: translateX(3px);
+    text-decoration: none;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 15px;
+    padding-top: 10px;
+}
+
+.contact-email {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    margin: 0;
+    opacity: 0.8;
+    color: #D7CCC8;
+    word-break: break-all;
+}
+
+.contact-email svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 40px;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.7rem;
+}
+
+.copyright, .credit {
+    opacity: 0.7;
+    color: #D7CCC8;
+    margin: 0;
+    font-size: 0.7rem;
+}
+
+/* --- RESPONSIVIDADE --- */
+
+/* Telas muito pequenas (menos de 400px) */
+@media (max-width: 400px) {
+    .artist-invite {
+        padding: 45px 0;
+        margin-top: 20px;
+    }
+    
+    .artist-badge {
+        font-size: 0.7rem;
+        padding: 4px 12px;
+        margin-bottom: 12px;
+    }
+    
+    .artist-title {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+    }
+    
+    .artist-description {
+        font-size: 0.85rem;
+        padding: 0 12px;
+        margin-bottom: 22px;
+    }
+    
+    .btn-artist-cta {
+        padding: 10px 22px;
+        font-size: 0.85rem;
+        gap: 8px;
+    }
+    
+    .arrow-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .main-footer {
+        padding-top: 35px;
+    }
+    
+    .footer-logo {
+        font-size: 1.5rem;
+    }
+    
+    .footer-description {
+        font-size: 0.8rem;
+    }
+    
+    .social-links {
+        gap: 10px;
+    }
+    
+    .social-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .social-icon svg {
+        width: 14px;
+        height: 14px;
+    }
+    
+    /* empilha tudo */
+    .main-footer .row > [class*="col-"] {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        text-align: center;
+    }
+    
+    .footer-title {
+        font-size: 0.8rem;
+    }
+    
+    .footer-title:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .main-footer .col-6 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer-links-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-links-list a {
+        font-size: 0.78rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .contact-email {
+        justify-content: center;
+        font-size: 0.75rem;
+        word-break: break-word;
+    }
+    
+    .footer-bottom {
+        margin-top: 25px;
+        padding: 12px 0;
+    }
+    
+    .copyright, .credit {
+        font-size: 0.7rem;
+        margin-bottom: 3px;
+    }
+}
+
+/* Telas médias pequenas (400px a 576px) */
+@media (min-width: 401px) and (max-width: 576px) {
+    .artist-title {
+        font-size: 1.8rem;
+    }
+    
+    .artist-description {
+        font-size: 0.9rem;
+    }
+    
+    .btn-artist-cta {
+        padding: 10px 24px;
+        font-size: 0.85rem;
+    }
+    
+    .footer-logo {
+        font-size: 1.6rem;
+    }
+    
+    .footer-description {
+        font-size: 0.78rem;
+    }
+    
+    .footer-title {
+        font-size: 0.78rem;
+    }
+    
+    .footer-links-list a {
+        font-size: 0.75rem;
+    }
+    
+    .contact-email {
+        font-size: 0.72rem;
+    }
+ 
+    .main-footer .col-6 {
+        text-align: center;
+    }
+    
+    .footer-title:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-links-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Tablets pequenos */
+@media (min-width: 577px) and (max-width: 768px) {
+    .artist-title {
+        font-size: 2.2rem;
+    }
+    
+    .artist-description {
+        font-size: 0.95rem;
+    }
+    
+    .footer-logo {
+        font-size: 1.7rem;
+    }
+    
+    .footer-description {
+        font-size: 0.8rem;
+    }
+    
+    .footer-title {
+        font-size: 0.8rem;
+    }
+    
+    .footer-links-list a {
+        font-size: 0.78rem;
+    }
+}
+
+/* Tablets e desktop normal */
+@media (min-width: 769px) {
+    .artist-title {
+        font-size: 2.5rem;
+    }
+    
+    .artist-description {
+        font-size: 1rem;
+    }
+    
+    .footer-logo {
+        font-size: 1.8rem;
+    }
+}
+
+/* Desktop grande */
+@media (min-width: 1200px) {
+    .artist-title {
+        font-size: 3rem;
+    }
+    
+    .artist-description {
+        font-size: 1.1rem;
+    }
+    
+    .footer-logo {
+        font-size: 2rem;
+    }
+}
