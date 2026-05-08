@@ -90,8 +90,8 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
 
   <td align="center">
-      <a href="https://github.com/..." title="Fabiane">
-        <img src="..." width="100px;" alt="Foto da Fabiane"/><br>
+      <a href="https://github.com/FabianneArezes" title="Fabiane">
+        <img src="https://github.com/FabianneArezes.png" width="100px;" alt="Foto da Fabiane"/><br>
         <sub><b>Fabiane</b></sub>
       </a>
     </td>
@@ -111,8 +111,8 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
 
   <td align="center">
-      <a href="https://github.com/..." title="Lucas Gabriel Santos">
-        <img src="..." width="100px;" alt="Foto do Lucas"/><br>
+      <a href="https://github.com/lucasand-dev1" title="Lucas Gabriel Santos">
+        <img src="https://github.com/lucasand-dev1.png" width="100px;" alt="Foto do Lucas"/><br>
         <sub><b>Lucas Gabriel Santos de Andrade</b></sub>
       </a>
     </td>
