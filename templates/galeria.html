@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/galeria.css' %}">
+
+<section class="galeria-hero">
+    <div class="galeria-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-main-title">Galeria</h1>
+        <p class="hero-subtitle">Explore obras únicas de artistas locais</p>
+    </div>
+</section>
+
+<div class="container mt-5 mb-5">
+    <div class="mb-4">
+        <small class="text-muted text-uppercase" style="letter-spacing: 2px;">Coleção</small>
+        <h2 class="font-weight-bold">Obras da Galeria</h2>
+    </div>
+
+    <div class="search-wrapper-inline mb-4">
+        <div class="search-form-clean">
+            <div class="search-input-group">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="inputBusca" placeholder="BUSCAR POR TÍTULO OU PALAVRA-CHAVE...">
+            </div>
+            
+            <div class="search-actions">
+                <button type="button" class="btn-filtros-clean" id="btnToggleFiltros">
+                    <i class="fas fa-sliders-h"></i> FILTROS
+                </button>
+                <button type="button" class="btn-buscar-submit">BUSCAR</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="containerCategorias" class="mb-5 filters-panel" style="display: none;">
+        <div class="filter-grid">
+            
+            <div class="filter-col">
+                <h6>CATEGORIA</h6>
+                <div class="pill-group">
+                    <button class="pill active" data-filter="cat" data-value="todas">Todas</button>
+                    <button class="pill" data-filter="cat" data-value="pintura">Pintura</button>
+                    <button class="pill" data-filter="cat" data-value="desenho">Desenho</button>
+                    <button class="pill" data-filter="cat" data-value="fotografia">Foto</button>
+                    <button class="pill" data-filter="cat" data-value="escultura">Escultura</button>
+                </div>
+            </div>
+
+            <div class="filter-col">
+                <h6>ESTILO / GÊNERO</h6>
+                <div class="pill-group">
+                    <button class="pill active" data-filter="estilo" data-value="todos">Todos</button>
+                    <button class="pill" data-filter="estilo" data-value="barroco">Barroco</button>
+                    <button class="pill" data-filter="estilo" data-value="romântico">Romântico</button>
+                    <button class="pill" data-filter="estilo" data-value="moderno">Moderno</button>
+                    <button class="pill" data-filter="estilo" data-value="realista">Realista</button>
+                    <button class="pill" data-filter="estilo" data-value="contemporâneo">Contemporâneo</button>
+                </div>
+            </div>
+
+            <div class="filter-col">
+                <h6>PREÇO</h6>
+                <div class="pill-group">
+                    <button class="pill active" data-filter="price" data-value="all">Todos</button>
+                    <button class="pill" data-filter="price" data-value="500">Até 500</button>
+                    <button class="pill" data-filter="price" data-value="1500">Até 1.5k</button>
+                </div>
+            </div>
+
+            <div class="filter-col">
+                <h6>ORDENAR</h6>
+                <select id="sortOrder" class="filter-select-mini">
+                    <option value="recent">Mais Recentes</option>
+                    <option value="price-asc">Menor Preço</option>
+                    <option value="price-desc">Maior Preço</option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4" id="listaObras">
+        {% for obra in obras %}
+        <div class="col mb-4 card-item" 
+             data-categoria="{{ obra.categoria|lower }}" 
+             data-estilo="{{ obra.categoria|lower }}" 
+             data-preco="2800">
+            <div class="card-obra">
+                <span class="badge-categoria text-uppercase">{{ obra.categoria }}</span>
+                <img src="{{ obra.imagem_url }}" class="obra-img" alt="{{ obra.nome }}">
+                <div class="pt-3">
+                    <h6 class="mb-0 font-weight-bold text-uppercase nome-obra">{{ obra.nome }}</h6>
+                    <small class="text-muted artista-obra">{{ obra.artista }}</small>
+                    <p class="font-weight-bold mt-1 valor-obra">R$ 2.800</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="text-center mt-5">
+        <button class="btn btn-outline-custom" style="padding: 12px 80px;">VER MAIS</button>
+    </div>
+</div>
+
+<script>
+    const inputBusca = document.getElementById('inputBusca');
+    const cards = Array.from(document.querySelectorAll('.card-item'));
+    const btnToggle = document.getElementById('btnToggleFiltros');
+    const panel = document.getElementById('containerCategorias');
+    const pills = document.querySelectorAll('.pill');
+    
+    let filters = { busca: '', cat: 'todas', estilo: 'todos', price: Infinity };
+
+    btnToggle.onclick = () => panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+
+    function updateGallery() {
+        cards.forEach(card => {
+            const nome = card.querySelector('.nome-obra').innerText.toLowerCase();
+            const artista = card.querySelector('.artista-obra').innerText.toLowerCase();
+            const c = card.dataset.categoria;
+            const e = card.dataset.estilo;
+            const p = parseFloat(card.dataset.preco);
+
+            const matchSearch = nome.includes(filters.busca) || artista.includes(filters.busca);
+            const matchCat = filters.cat === 'todas' || c === filters.cat;
+            const matchEstilo = filters.estilo === 'todos' || e === filters.estilo;
+            const matchPrice = p <= filters.price;
+
+            card.style.display = (matchSearch && matchCat && matchEstilo && matchPrice) ? "" : "none";
+        });
+    }
+
+    inputBusca.oninput = (e) => { filters.busca = e.target.value.toLowerCase(); updateGallery(); };
+
+    pills.forEach(p => {
+        p.onclick = () => {
+            const type = p.dataset.filter;
+            const val = p.dataset.value;
+            document.querySelectorAll(`.pill[data-filter="${type}"]`).forEach(b => b.classList.remove('active'));
+            p.classList.add('active');
+            
+            if(type === 'price') filters.price = val === 'all' ? Infinity : parseFloat(val);
+            else filters[type] = val;
+            
+            updateGallery();
+        };
+    });
+</script>
+{% endblock %}

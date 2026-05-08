@@ -2,13 +2,13 @@
     <div class="container-fluid px-3 px-md-5">
         
         <!-- Logo à esquerda -->
-        <a class="navbar-brand logo-fibonacci" href="#">FIBONACCI</a>
+        <a class="navbar-brand logo-fibonacci" href="{% url 'home' %}">FIBONACCI</a>
 
         <!-- Menu -->
         <div class="menu-wrapper">
             <ul class="nav-menu">
-                <li class="nav-item"><a class="nav-link" href="#">INÍCIO</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">GALERIA</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">INÍCIO</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'galeria' %}">Galeria</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">ARTISTAS</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">CONTATO</a></li>
             </ul>
