@@ -40,3 +40,19 @@ def galeria(request):
         obras_falsas = [o for o in obras_falsas if busca.lower() in o['nome'].lower() or busca.lower() in o['artista'].lower()]
 
     return render(request, 'galeria.html', {'obras': obras_falsas})
+
+def login_view(request):
+    return render(request, 'login.html')
+
+def perfil(request):
+    usuario_falso = {
+        'nome': 'Emilly Marrocos',
+        'email': 'emilly.marrocos@exemplo.com',
+        'avatar': 'https://github.com/EmillyMarrocos.png'
+    }
+
+    contexto = {
+        'usuario': usuario_falso
+    }
+    
+    return render(request, 'perfil.html', contexto)

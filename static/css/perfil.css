@@ -1,0 +1,74 @@
+.perfil-dashboard {
+    min-height: calc(100vh - 150px);
+}
+
+.perfil-sidebar {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.perfil-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--btn-borda);
+    padding: 3px;
+}
+
+.btn-outline-custom {
+    border: 1px solid var(--btn-borda);
+    background: transparent;
+    color: var(--texto-escuro);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+}
+
+.btn-outline-custom:hover {
+    background-color: #5D4037;
+    color: white;
+    border-color: #5D4037;
+}
+
+.perfil-menu {
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+}
+
+.list-group-item {
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--btn-borda);
+    transition: all 0.2s ease;
+}
+
+.list-group-item:first-child {
+    border-top: none;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+.list-group-item:hover {
+    background-color: var(--bg-creme);
+}
+
+.icon-menu {
+    font-size: 1.2rem;
+    color: var(--texto-escuro);
+    width: 20px;
+    text-align: center;
+}
+
+.text-danger .icon-menu {
+    color: #dc3545;
+}
+

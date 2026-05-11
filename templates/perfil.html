@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/perfil.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container perfil-dashboard py-5">
+    <div class="row">
+        <div class="col-12 col-md-4 mb-4">
+            <div class="perfil-sidebar text-center p-4">
+                <img src="{{ usuario.avatar }}" alt="Avatar" class="perfil-avatar mb-3">
+                <h4 class="font-weight-bold mb-1">{{ usuario.nome }}</h4>
+                <p class="text-muted small mb-3">{{ usuario.email }}</p>
+                <button class="btn btn-outline-custom btn-sm mb-2">Editar Perfil</button>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-8">
+            <h3 class="mb-4 font-weight-bold" style="font-family: 'Playfair Display', serif;">Minha Conta</h3>
+
+            <div class="list-group perfil-menu shadow-sm">
+                <a href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center p-4">
+                    <div>
+                        <i class="far fa-user mr-3 icon-menu"></i>
+                        <span class="font-weight-bold">Meus Dados</span>
+                        <p class="mb-0 text-muted small mt-1 ml-4">Informações da sua conta e contato</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-muted"></i>
+                </a>
+
+                <a href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center p-4">
+                    <div>
+                        <i class="fas fa-shopping-bag mr-3 icon-menu"></i>
+                        <span class="font-weight-bold">Meus Pedidos</span>
+                        <p class="mb-0 text-muted small mt-1 ml-4">Acompanhe suas compras de obras de arte</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-muted"></i>
+                </a>
+
+                <a href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center p-4">
+                    <div>
+                        <i class="far fa-heart mr-3 icon-menu"></i>
+                        <span class="font-weight-bold">Favoritos</span>
+                        <p class="mb-0 text-muted small mt-1 ml-4">Obras que você curtiu e salvou</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-muted"></i>
+                </a>
+
+                <a href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center p-4">
+                    <div>
+                        <i class="fas fa-palette mr-3 icon-menu"></i>
+                        <span class="font-weight-bold">Painel do Artista</span>
+                        <p class="mb-0 text-muted small mt-1 ml-4">Gerencie suas obras publicadas e vendas</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-muted"></i>
+                </a>
+
+                <a href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center p-4 text-danger border-top">
+                    <div>
+                        <i class="fas fa-sign-out-alt mr-3 icon-menu"></i>
+                        <span class="font-weight-bold">Sair da conta</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
