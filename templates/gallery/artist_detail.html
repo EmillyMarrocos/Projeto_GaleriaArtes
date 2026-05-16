@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <h1>{{ artist.name }}</h1>
+    <p>{{ artist.bio }}</p>
+
+    <h2 class="h4 mt-4">Obras</h2>
+    {% for artwork in artworks %}
+        <p>{{ artwork.title }}</p>
+    {% empty %}
+        <p>Nenhuma obra cadastrada para este artista.</p>
+    {% endfor %}
+</div>
+{% endblock %}

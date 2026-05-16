@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="mb-4">Artistas</h1>
+    {% for artist in artists %}
+        <p><a href="{% url 'gallery:artist_detail' artist.pk %}">{{ artist.name }}</a></p>
+    {% empty %}
+        <p>Nenhum artista cadastrado.</p>
+    {% endfor %}
+</div>
+{% endblock %}

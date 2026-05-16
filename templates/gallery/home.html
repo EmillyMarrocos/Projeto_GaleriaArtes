@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="mb-4">Galeria</h1>
+
+    <h2 class="h4">Destaques</h2>
+    <div class="row">
+        {% for artwork in featured %}
+            <div class="col-md-4 mb-4">
+                <h3 class="h5">{{ artwork.title }}</h3>
+                <p>{{ artwork.artist.name }}</p>
+            </div>
+        {% empty %}
+            <p class="col-12">Nenhuma obra em destaque cadastrada.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

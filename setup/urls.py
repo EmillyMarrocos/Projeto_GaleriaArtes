@@ -1,5 +1,7 @@
 from django.contrib import admin
-from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import include, path
 from artistas import views
 
 urlpatterns = [
@@ -9,4 +11,7 @@ urlpatterns = [
     path('galeria/', views.galeria, name='galeria'), 
     path('login/', views.login_view, name='login'),
     path('perfil/', views.perfil, name='perfil'),
-]
+    path('contas/', include('accounts.urls')),
+    path('gallery/', include('gallery.urls')),
+    path('carrinho/', include('carrinho.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
