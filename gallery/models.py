@@ -91,5 +91,4 @@ class Review(models.Model):
         ordering = ["-created_at"]
         unique_together = ["artwork", "user"]
 
-    def __str__(self):
-        return f"{self.user.username} → {self.artwork.title} ({self.rating}★)"
+    def __str__(self):        return f"{self.user.username} → {self.artwork.title} ({self.rating} estrelas)"
